@@ -36,6 +36,32 @@ Things that are close but imperfect:
       Encryption key can be generated automatically such that resource is locked forever and no one can 
       open it. Hehe, I like this one very much.
 
+      but how have encrypted resource that allows 1 key out per request? And how prevent one person from 
+      taking out multiple keys. Ugh, this actually does not work. 
+
+      Other issues: if all employeees are eager feedback. Then revealing identity of a keyholder becomes 
+      much easier. Example: 4 existing employees, 4 feedback accounts granted, any new accounts are therefore 
+      definitely not one of the 4 existing employees. This is what makes me think that a trusted third party is 
+      necessary. An identity escrow service. 
+
+   3. Identity escrow service
+      Trusted third party keeps the mapping between 
+
+
+Other fundamental issues...
+    because feedback from given user is tracked. Anytime feedback is given; fundamentally, it will 
+    become known that the user is one of the existing employees and not one of the future employees. 
+    Therefore, even with perfect implementation, in worst case, user gives immediate feedback after 
+    account granted -> identity reveal because submission of feedback implies user is one of existing 
+    employees. 
+
+    workaround. Only grant accounts in blocks of size >1
+    block size | worst-case identity reveal accuracy
+    1 | 100%
+    2 | 50%
+
+    worst-case identity reveal accuracy = 1 / n
+
 Things that will not work:
    1. Allocate a fixed number of hashed identifiers. 
    Boss distributes hashed identifier to new employees. 
