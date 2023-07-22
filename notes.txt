@@ -18,6 +18,24 @@ Things that are close but imperfect:
       still vulnerable to sock puppet attack if responses are deleted (allowing user to submit more)
 
 
+   2. Very sparse allocation of 100 unique user ID's. Print off user ID's. Mix into a bowl. 
+      Allow employee to pull exactly 1 ID from bowl. ID is a key that unlocks account generation 
+      that can be triggered exactly once at anytime in the future. 
+      Keep track of birthday problem for possible collisions of unique ID's. Make guessing a unique ID 
+      extremely difficult. Keep bowl relatively full of unique user ID's.
+
+      Only relatively pseudonymous because boss controls bowl and keep track of which unique ID's have 
+      been allocated from bowl. Boss can also track changes of state in bowl to know which ID's have 
+      been allocatted. 
+
+      Maybe lock the bowl so that only one ID can be pulled out, and no ID's can be put back in.
+      This would prevent Boss from probing the state of the allocated ID's.
+
+      I think this can be translated into software by encrypting the bowl and throwing away the key.
+      ^^ definitely onto something here and does not require a third party. 
+      Encryption key can be generated automatically such that resource is locked forever and no one can 
+      open it. Hehe, I like this one very much.
+
 Things that will not work:
    1. Allocate a fixed number of hashed identifiers. 
    Boss distributes hashed identifier to new employees. 
