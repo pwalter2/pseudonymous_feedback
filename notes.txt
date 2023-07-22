@@ -1,0 +1,47 @@
+Goals:
+   No sock puppets. User account is unique and pseudonymous.
+   1 user account per employee.
+
+   Could be an interesting web service to offer to companies.
+
+
+Defend against:
+    non-consensual identification of feedback user
+    prevent employee X from posing / posting as employee Y
+    
+
+Things that are close but imperfect:
+   1. Google forms with "no collect email" and "limited to 1 response"
+    deleting a response allows responder to submit a new one.
+   Missing features:
+      boss cannot respond to a given response.
+      still vulnerable to sock puppet attack if responses are deleted (allowing user to submit more)
+
+
+Things that will not work:
+   1. Allocate a fixed number of hashed identifiers. 
+   Boss distributes hashed identifier to new employees. 
+   Because Boss knows state of identifier list, employees not pseudo.
+
+   2. Employee picks or otherwise generates their own user identifier. 
+   Then, they can generate a new identifier for sock puppet attack.
+
+   3. Feedback box that is not monitored. Submissions are then anonymous and 
+    employees can sock puppet.
+
+   4. do whatever blockchain does for identity. Will not work because blockchain 
+   identity not unique. Sock puppet attack.
+
+   
+
+
+Ideas:
+    need a 3rd party?
+    how does blockchain do identity?
+    blockchain not relevant 
+    zero knowledge proof
+       employee must prove that has zero or one pseudo identities. 
+      preferably without revealing their own identity, but that may not be possible.
+
+    trusted third party is Google and google forms and google account
+    need to have a trusted third party because fundamentally employee must reveal
